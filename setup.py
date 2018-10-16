@@ -11,7 +11,7 @@ with open('README.rst') as readme_file:
 with open('HISTORY.rst') as history_file:
     history = history_file.read()
 
-requirements = ['Click>=6.0', ]
+requirements = [ ]
 
 setup_requirements = ['pytest-runner', ]
 
@@ -36,7 +36,7 @@ setup(
     description="drosSRA builds a url for visualization of tracks based on user specified parameters (i.e. sex, tissue, cell type)",
     entry_points={
         'console_scripts': [
-            'drosSRA=drosSRA.cli:main',
+            'drosSRA=drosSRA.drosSRA:main',
         ],
     },
     install_requires=requirements,
