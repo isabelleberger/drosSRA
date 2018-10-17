@@ -4,12 +4,8 @@
 """Tests for `drosSRA` package."""
 
 import pytest
-
-from click.testing import CliRunner
-
+import requests
 from drosSRA import drosSRA
-from drosSRA import cli
-
 
 @pytest.fixture
 def response():
@@ -17,22 +13,10 @@ def response():
 
     See more at: http://doc.pytest.org/en/latest/fixture.html
     """
-    # import requests
-    # return requests.get('https://github.com/audreyr/cookiecutter-pypackage')
+    return requests.get('https://github.com/isabelleberger/drosSRA')
 
-
-def test_content(response):
-    """Sample pytest test function with the pytest fixture as an argument."""
-    # from bs4 import BeautifulSoup
-    # assert 'GitHub' in BeautifulSoup(response.content).title.string
-
-
-def test_command_line_interface():
-    """Test the CLI."""
-    runner = CliRunner()
-    result = runner.invoke(cli.main)
-    assert result.exit_code == 0
-    assert 'drosSRA.cli.main' in result.output
-    help_result = runner.invoke(cli.main, ['--help'])
-    assert help_result.exit_code == 0
-    assert '--help  Show this message and exit.' in help_result.output
+def test_drosSRA(pubmed_id, capsys):
+    #drosSRA.main(pubmed_id)
+    test_run = drosSRA.main(['-p','24151578.0'])
+    out, err = capsys.readouterr()
+    assert out=='https://www.ncbi.nlm.nih.gov/genome/gdv/browser/?context=GEO&acc=DRX013093%2CDRX013094\n'

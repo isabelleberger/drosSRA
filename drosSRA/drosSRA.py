@@ -7,7 +7,7 @@ import sys
 import pandas as pd
 
 
-def arguments():
+def arguments(argv=None):
     parser = argparse.ArgumentParser()
 
     parser.add_argument("-p", "--pubmed_id", dest="pubmed", nargs='*', type=float, action="store")
@@ -16,16 +16,15 @@ def arguments():
     parser.add_argument("-t", "--tissue", dest="tissue", nargs='*', type=str, action="store")
     parser.add_argument("-c", "--cell_type", dest="celltype", nargs='*', type=str, action="store")
 
-    args = parser.parse_args()
+    args = parser.parse_args(argv)
     return args
 
 
-def main():
-    args = arguments()
-    meta = pd.read_table('rnaseq_metadata.tsv')
+def main(argv=None):
+    args = arguments(argv)
+    meta = pd.read_table('drosSRA/rnaseq_metadata.tsv')
     sample_ids = []
-
-    if len(sys.argv)==1:
+    if (len(sys.argv)==1 and argv==None):
         sys.exit("One or more flags are necessary to identify tracks of interest")
 
     if args.pubmed:
