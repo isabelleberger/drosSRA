@@ -15,7 +15,7 @@ requirements = ['pandas', 'argparse',]
 
 setup_requirements = ['pytest-runner', ]
 
-test_requirements = ['pytest', ]
+test_requirements = ['pytest', 'requests']
 
 setup(
     author="Isabelle Berger",
