@@ -24,7 +24,8 @@ drosSRA
 Installation
 ------------
 
-To download and install the latest version of ``drosSRA``::
+To download and install the latest version of ``drosSRA``:
+::
    pip install drosSRA
 
 Usage
