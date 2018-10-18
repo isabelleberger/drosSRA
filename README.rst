@@ -16,8 +16,7 @@ drosSRA
 
 
 
-drosSRA builds a url containing all relevant GEO_ tracks based on one or more user specified parameters (i.e. sex, tissue, cell type)
-.. _GEO: https://www.ncbi.nlm.nih.gov/geo/
+``drosSRA`` builds a url containing all relevant GEO_ tracks based on one or more user specified parameters (i.e. sex, tissue, cell type)
 
 * Free software: MIT license
 * Documentation: https://drosSRA.readthedocs.io.
@@ -42,5 +41,6 @@ Credits
 
 This package was created with Cookiecutter_ and the `audreyr/cookiecutter-pypackage`_ project template.
 
+.. _GEO: https://www.ncbi.nlm.nih.gov/geo/
 .. _Cookiecutter: https://github.com/audreyr/cookiecutter
 .. _`audreyr/cookiecutter-pypackage`: https://github.com/audreyr/cookiecutter-pypackage
