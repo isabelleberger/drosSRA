@@ -38,7 +38,8 @@ def main(argv=None):
     funct = lambda x:':'.join(map(str, [getattr(x, col) for col in use]))
     meta['merged'] = meta.apply(funct, axis=1)
     sample_ids = meta[meta['merged'] == search].sample_name.values
-    if not sample_ids:
+    #check that sample ids exist for this combination
+    if not sample_ids.any():
         sys.exit("Sorry, no tracks exist for that search")
     #build url
     GO = 'https://www.ncbi.nlm.nih.gov/genome/gdv/browser/?context=GEO&acc='
