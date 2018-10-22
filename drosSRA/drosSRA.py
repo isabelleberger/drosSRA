@@ -27,8 +27,6 @@ def main(argv=None):
     #need to handle plural somehow too
     #actually (need to check with justin) dont think we'll have any plurals
     
-
-    
     dictargs = vars(args)
     if all(val==None for val in dictargs.values()):
         sys.exit("One or more flags are necessary to identify tracks of interest")
@@ -40,6 +38,8 @@ def main(argv=None):
     funct = lambda x:':'.join(map(str, [getattr(x, col) for col in use]))
     meta['merged'] = meta.apply(funct, axis=1)
     sample_ids = meta[meta['merged'] == search].sample_name.values
+    if not sample_ids:
+        sys.exit("Sorry, no tracks exist for that search")
     #build url
     GO = 'https://www.ncbi.nlm.nih.gov/genome/gdv/browser/?context=GEO&acc='
     url = GO + '%2C'.join(sample_ids)
