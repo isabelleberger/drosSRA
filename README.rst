@@ -9,8 +9,8 @@ drosSRA
 .. image:: https://img.shields.io/travis/isabelleberger/drosSRA.svg
         :target: https://travis-ci.org/isabelleberger/drosSRA
 
-.. image:: https://readthedocs.org/projects/drosSRA/badge/?version=latest
-        :target: https://drosSRA.readthedocs.io/en/latest/?badge=latest
+.. image:: https://readthedocs.org/projects/drossra/badge/?version=latest
+        :target: https://drossra.readthedocs.io/en/latest/?badge=latest
         :alt: Documentation Status
 
 
