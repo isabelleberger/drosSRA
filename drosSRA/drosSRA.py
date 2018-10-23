@@ -42,7 +42,7 @@ def main(argv=None):
     if not sample_ids.any():
         sys.exit("Sorry, no tracks exist for that search")
     #build url
-    GO = 'https://www.ncbi.nlm.nih.gov/genome/gdv/browser/?context=GEO&acc='
+    GO = 'https://www.ncbi.nlm.nih.gov/genome/gdv/browser/?context=genome&acc=GCF_000001215.4&context=GEO&acc='
     url = GO + '%2C'.join(sample_ids)
     print(url)
 
