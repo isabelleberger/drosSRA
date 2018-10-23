@@ -21,7 +21,7 @@ deploy:
   distributions: sdist bdist_wheel
   user: isabelleberger
   password:
-    secure: PLEASE_REPLACE_ME
+    secure: OtgXKmnYyMr58czzE/GEz3LnnelQvo2yXyCU7jveyfLFu1kMSi8nKtrUIy9kwj9H4tIg2WWoUQJN0TIkrpJRuRprUnnY/oWXopDr5ndxS+j1OKEqyfPJEeYmPJjnuZlyAVOb42OEGrxylUEC0EUaz23sWe/Ui9RWBJ2vQg5Klp1bZ+XFxHl5LohDrWQezFvwwTKkLvQ9WrmNfsQL0jsjKfUgDq0iltpsy+tp5Z7y+BzGIuYdotWnfADWhF6/UGkISO1Oczb23tMMKQ1Pm99MDYy8HQ5dQX19O0VXJVsnJKir0v/S4Xd+q7DZwzhZ1YsYWRrrHaosMrK3MIPndYwhXxZClfA/lRKyHMRE7spmebpeX4P/XM3ujKvI3dz75M322n7AWDxYp82TwesW8YA9B05mjh1881zaK6wlrg8Lz8pQc9eVJqcyl1KdKb/ptVmHJnaGS5UctAM01iVaYMvIxkgKXxhmrIFuA9FgCTkN2krfvZiGODOCDIhxVGkHNMPEmnHo8Wb3b3pL7c4SIm3FQFouet0KapHOL3RUXhYrDfOqdKqmY4deH7sclb+7I9eUKJSPkXevanykJYrDxIhKjW5b6Gs13R8FjHZPP0son42V5aje+c3Yw3CZqhtrzUFkr/X+9+Wce+6yASAgYZrK9KA2ozJrvUrPLbTgiqNatGc=
   on:
     tags: true
     repo: isabelleberger/drosSRA
