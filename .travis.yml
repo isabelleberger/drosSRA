@@ -1,27 +1,16 @@
-# Config file for automatic testing at travis-ci.org
-
 language: python
 python:
-  - 3.6
-  - 3.5
-  - 3.4
-
-# Command to install dependencies, e.g. pip install -r requirements.txt --use-mirrors
+- 3.6
+- 3.5
+- 3.4
 install: python setup.py install
-
-# Command to run tests, e.g. python setup.py test
-script: python setup.py test 
-
-# Assuming you have installed the travis-ci CLI tool, after you
-# create the Github repo and add it to Travis, run the
-# following command to finish PyPI deployment setup:
-# $ travis encrypt --add deploy.password
+script: python setup.py test
 deploy:
   provider: pypi
   distributions: sdist bdist_wheel
   user: isabelleberger
   password:
-    secure: OtgXKmnYyMr58czzE/GEz3LnnelQvo2yXyCU7jveyfLFu1kMSi8nKtrUIy9kwj9H4tIg2WWoUQJN0TIkrpJRuRprUnnY/oWXopDr5ndxS+j1OKEqyfPJEeYmPJjnuZlyAVOb42OEGrxylUEC0EUaz23sWe/Ui9RWBJ2vQg5Klp1bZ+XFxHl5LohDrWQezFvwwTKkLvQ9WrmNfsQL0jsjKfUgDq0iltpsy+tp5Z7y+BzGIuYdotWnfADWhF6/UGkISO1Oczb23tMMKQ1Pm99MDYy8HQ5dQX19O0VXJVsnJKir0v/S4Xd+q7DZwzhZ1YsYWRrrHaosMrK3MIPndYwhXxZClfA/lRKyHMRE7spmebpeX4P/XM3ujKvI3dz75M322n7AWDxYp82TwesW8YA9B05mjh1881zaK6wlrg8Lz8pQc9eVJqcyl1KdKb/ptVmHJnaGS5UctAM01iVaYMvIxkgKXxhmrIFuA9FgCTkN2krfvZiGODOCDIhxVGkHNMPEmnHo8Wb3b3pL7c4SIm3FQFouet0KapHOL3RUXhYrDfOqdKqmY4deH7sclb+7I9eUKJSPkXevanykJYrDxIhKjW5b6Gs13R8FjHZPP0son42V5aje+c3Yw3CZqhtrzUFkr/X+9+Wce+6yASAgYZrK9KA2ozJrvUrPLbTgiqNatGc=
+    secure: nPpwxs01yKKn2akQ+7bV1p/F5ucYrPuu1kMDvpvinSNKB9CZ6s7KUQhBwPbNmXCCKCQBGmS1zjaqdqaYm68WWHT1sLajVfDiwWRLbzUs61AUIFY9RYO1x7qjz7sF4gL8jqmg8BKdKOFEww6jQhUaiEEmlspJoDGGAxZUIZL+7RV9LSLm0vYBsGKZYzYK1qyTjldUtP16zBG9FKYCteClv0UXTayi5Y0l8eVOoDzaBXuRWX5dZ7293pAUj9sCv4AzGVz55gtgeKj3/vHuEyQNZKJ9rjME6H8p4uh7mLq/HMUfoc0JqmdFg3zfV9+ReAPak/rbRo2yWWcL6KnMbUwA3AuW9n9yoMklIGUJ1iKaaSDm9hNex9UpvwWml8igmxV+OhmPvNo8nO/pN9gMFWI7EcnHIWeHT0hqXY58jremm1bIeLif94keePbkf27KwhStbPFIs920uo/NTbivS6TOqcsowhR3+wAcOX/DCrG9eMETZ1erjh/X4nZfrAepBS6EjpDCtFuZMnSZLN3Q2qvUpDctFtkGoEr2FzTnuJR0mAgxF831amI8jtFe3/DeQlNcXiasM17X4DxUoVw0KcUe3TGMkAmeFL9kPP3790DzAd5PC5c5Gp+0M+MK/d+QrZgEJAtCkXGvWV7G1YfXmLJqWxZPzAuG+aZ8COK7vEYCjEM=
   skip_cleanup: true
   on:
     tags: true
