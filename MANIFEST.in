@@ -4,7 +4,7 @@ include HISTORY.rst
 include LICENSE
 include README.rst
 
-recursive-include drosSRA *.tsv
+include rnaseq_metadata.tsv
 
 recursive-include tests *
 recursive-exclude * __pycache__

@@ -22,7 +22,7 @@ def arguments(argv=None):
 
 def main(argv=None):
     args = arguments(argv)
-    meta = pd.read_table('drosSRA/rnaseq_metadata.tsv')
+    meta = pd.read_table('rnaseq_metadata.tsv')
     
     #need to handle plural somehow too
     #actually (need to check with justin) dont think we'll have any plurals
