@@ -2,6 +2,30 @@
 History
 =======
 
+0.4.5 (2018-10-31)
+------------------
+
+* finally figure out how to include metadata table! 
+
+
+0.4.4 (2018-10-31)
+------------------
+
+* same as 0.4.3
+
+
+0.4.3 (2018-10-31)
+------------------
+
+* patch for metadata file path issue -- still broken
+
+
+0.4.2 (2018-10-31)
+------------------
+
+* include metadata file in MANIFEST
+
+
 0.4.1 (2018-10-24)
 ------------------
 
