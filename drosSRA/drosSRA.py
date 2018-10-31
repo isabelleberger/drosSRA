@@ -5,7 +5,8 @@
 import argparse
 import sys
 import pandas as pd
-
+import pkgutil
+import io
 
 def arguments(argv=None):
     parser = argparse.ArgumentParser()
@@ -22,7 +23,8 @@ def arguments(argv=None):
 
 def main(argv=None):
     args = arguments(argv)
-    meta = pd.read_table('rnaseq_metadata.tsv')
+    data = pkgutil.get_data('drosSRA', 'rnaseq_metadata.tsv')
+    meta = pd.read_table(io.BytesIO(data), encoding='utf8')
     
     #need to handle plural somehow too
     #actually (need to check with justin) dont think we'll have any plurals
